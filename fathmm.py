@@ -85,7 +85,7 @@ def common_mutations(vcf_positions, vcf_variants, cosmicMutations):
 		cosmicOverlap[sample1] = (vcf_variants[sample1].intersection(cosmicMutations))
 
 	fathmm = {}
-	df = pd.read_csv("fathmm.csv",dtype=object)
+	df = pd.read_csv("fathmm_test.csv",dtype=object)
 	cos = df.to_dict("records")
 	for val in cosmicOverlap.values():
 		for value in val:
